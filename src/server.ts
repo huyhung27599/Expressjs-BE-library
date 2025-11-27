@@ -1,7 +1,8 @@
 import app from "./app";
 import { AppDataSource } from "./config/database";
+import { port } from "./config/config";
 
-const PORT = process.env.PORT || 3000;
+const PORT = port || 3000;
 
 AppDataSource.initialize()
   .then(() => {
