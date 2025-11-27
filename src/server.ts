@@ -2,15 +2,13 @@ import app from "./app";
 import { AppDataSource } from "./config/database";
 import { port } from "./config/config";
 
-const PORT = port || 3000;
-
 AppDataSource.initialize()
   .then(() => {
     console.log("Database connection established");
 
     // Start server
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
     });
   })
   .catch((error) => {
