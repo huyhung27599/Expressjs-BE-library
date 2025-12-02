@@ -12,7 +12,7 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE || "expressjs_library",
   synchronize: process.env.NODE_ENV === "development",
   logging: process.env.NODE_ENV === "development",
-  entities: [__dirname + "/../entities/**/*.ts"],
+  entities: [__dirname + "/../entities/**/*.{ts,js}"],
   migrations: [__dirname + "/../migrations/**/*.ts"],
   subscribers: [__dirname + "/../subscribers/**/*.ts"],
 });
